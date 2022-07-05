@@ -1,6 +1,10 @@
 # eloquent-javascript-notes
 Interesting tidbits from the book Eloquent Javascript by Marjin Haverbeke
 
+Read it for free: https://eloquentjavascript.net/
+
+<img src="https://eloquentjavascript.net/img/cover.jpg" alt="eloquent JS book cover" width="200px">
+
 
 ## Chapter 1
 
