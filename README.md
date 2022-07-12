@@ -22,11 +22,11 @@ This will only be true if x is either null or undefined
 ## Chapter 5
 
 - Common operations on JS Strings (e.g. getting length, or using square brackets to access elements) deal with code-units (i.e. 16 bits pieces).
-JavaScript’s charCodeAt method gives you a code unit, not a full character code. The codePointAt method, added later, does give a full Unicode character.
-So we could use that to get characters from a string. But the argument passed to codePointAt is still an index into the sequence of code units. So to run over all characters in a string, we’d still need to deal with the question of whether a character takes up one or two code units.
+JavaScript’s `charCodeAt()` gives you a code unit, not a full character code. `codePointAt()`, added later, does give a full Unicode character.
+But the argument passed to codePointAt is still an index into the sequence of code units. So to run over all characters in a string, we’d still need to deal with the question of whether a character takes up one or two code units.
 
 - Back when the `for/of` loop was implemented, everyone was pretty aware of the UTF-16 Javascript problem. 
 When you use it to loop over a string, it gives you real characters, not code units.
 It is therefore safe to assume that in `for (let c of str)`, the value of `c` will be one character, regardless of it being a simple unicode character or a complex emoji.
 
-- findIndex is a more complex version of indexOf. Instead of looking for a specific value, it accepts a condition and returns the index of the first element for which the condition is true. -1 Otherwise. It is similar to Array.find, but it returns the index instead of the element itself.
+- `findIndex` is a more complex version of `indexOf`. Instead of looking for a specific value, it accepts a condition and returns the index of the first element for which the condition is true. -1 Otherwise. It is similar to `Array.find`, but it returns the index instead of the element itself.
